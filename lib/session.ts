@@ -63,8 +63,6 @@ export const authOptions: NextAuthOptions = {
           user?: UserProfile
         }
 
-        console.log('userExists', userExists)
-
         if (!userExists.user) {
           await createUser(
             user.name as string,
@@ -75,7 +73,7 @@ export const authOptions: NextAuthOptions = {
 
         return true
       } catch (error: any) {
-        console.log('Error checking if user exists: ', error.message)
+        console.error('Error checking if user exists: ', error.message)
         return false
       }
     },

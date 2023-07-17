@@ -34,7 +34,6 @@ const Project = g
     rules.private().create().delete().update()
   })
 
-console.log('env', '{{env}}')
 const jwt = auth.JWT({
   issuer: 'grafbase',
   secret: '{{env.NEXTAUTH_SECRET}}',
